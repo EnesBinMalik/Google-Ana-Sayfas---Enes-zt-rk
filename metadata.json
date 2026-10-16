@@ -1,0 +1,6 @@
+{
+  "name": "Google Ana Sayfası - Enes Öztürk",
+  "description": "Modern Google ana sayfasının piksel piksel tasarımı, arama kutusu, sesli arama, lens, uygulamalar çekmecesi ve Enes Öztürk imzası.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

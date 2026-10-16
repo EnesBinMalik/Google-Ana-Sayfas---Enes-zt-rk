@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* 
+ * ==========================================================================
+ * GOOGLE ANA SAYFASI - ENES ÖZTÜRK ÖZEL CSS STİLLERİ
+ * ==========================================================================
+ * Bu stil dosyasında ödev isterlerine birebir uygun kurallar, Google'ın
+ * orijinal renk ve font parametreleri ve karanlık tema değişkenleri tanımlanmıştır.
+ */
+
+:root {
+  /* Google Tipografi ve Renk Paleti */
+  --font-family-google: 'Google Sans', Roboto, Arial, sans-serif;
+  --font-family-arial: Arial, Helvetica, sans-serif;
+  
+  /* Açık Tema Renkleri */
+  --bg-primary: #ffffff;
+  --bg-footer: #f2f2f2;
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --text-footer: #70757a;
+  --border-search: #dfe1e5;
+  --border-button: #f2f2f2;
+  --bg-button: #f8f9fa;
+  --bg-button-hover: #f1f3f4;
+  --border-button-hover: #dadce0;
+  --shadow-search-hover: 0 1px 6px rgba(32, 33, 36, 0.28);
+  --shadow-dropdown: 0 4px 6px rgba(32, 33, 36, 0.28);
+}
+
+.dark {
+  /* Koyu Tema Renkleri */
+  --bg-primary: #202124;
+  --bg-footer: #171717;
+  --text-primary: #e8eaed;
+  --text-secondary: #9aa0a6;
+  --text-footer: #9aa0a6;
+  --border-search: #5f6368;
+  --border-button: #303134;
+  --bg-button: #303134;
+  --bg-button-hover: #3c4043;
+  --border-button-hover: #5f6368;
+  --shadow-search-hover: 0 1px 6px rgba(0, 0, 0, 0.5);
+  --shadow-dropdown: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: var(--font-family-arial);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* 
+ * Ödev İsteri: Butonlar için özel stil
+ * - Yazı tipi: Arial
+ * - Yazı rengi: #5f6368
+ * - Yazı boyutu: 14px
+ * - Yükseklik: 36px
+ * - Kenarlık: 1px solid #f2f2f2
+ * - Gölge: Arama kutusu gibi gölge efekti
+ */
+.google-btn {
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  height: 36px !important;
+  border: 1px solid var(--border-button) !important;
+  background-color: var(--bg-button) !important;
+  border-radius: 4px;
+  padding: 0 16px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.google-btn:hover {
+  background-color: var(--bg-button-hover) !important;
+  border-color: var(--border-button-hover) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 1px 3px rgba(32, 33, 36, 0.2) !important;
+}
+
+/* 
+ * Ödev İsteri: Arama Alanı Yazı Girişi (Input)
+ * - Genişlik: 480px
+ * - Kenarlık: Olmamalı (border: none)
+ */
+.google-search-input {
+  width: 480px;
+  max-width: 100%;
+  border: none !important;
+  outline: none !important;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+/* 
+ * Ödev İsteri: Footer Stilleri
+ * - Arka plan: #f2f2f2
+ * - Liste noktaları: Ortadan kaldırılmalı (list-style: none)
+ */
+.google-footer {
+  background-color: var(--bg-footer) !important;
+  color: var(--text-footer);
+  font-size: 14px;
+  width: 100%;
+}
+
+.google-footer ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Animasyonlar */
+@keyframes pulseWave {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-1 {
+  animation: pulseWave 1.2s ease-in-out infinite 0.1s;
+}
+.animate-wave-2 {
+  animation: pulseWave 1.2s ease-in-out infinite 0.25s;
+}
+.animate-wave-3 {
+  animation: pulseWave 1.2s ease-in-out infinite 0.4s;
+}
+.animate-wave-4 {
+  animation: pulseWave 1.2s ease-in-out infinite 0.55s;
+}
